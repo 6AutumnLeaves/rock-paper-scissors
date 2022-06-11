@@ -4,3 +4,6 @@
 //Pick number 1-3
 //1 = rock; 2 = paper; 3 = scissors
 //return value
+function computerPlay() {
+    return Math.floor(Math.random() *3);
+}
