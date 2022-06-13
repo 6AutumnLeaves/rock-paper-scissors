@@ -19,6 +19,22 @@ function computerPlay(random) {
     }
 }
 
+//prompt player for their choice
+//make it case insensitive
+//ie: if RocK or rOCK
+//return Rock
+function playerSelection(playerChoice) {
+    let playerPrompt = prompt("Rock, Paper, or Scissors?");
+    console.log(playerPrompt);
+    let playerChoice1 = playerPrompt[0].toUpperCase();
+    console.log(playerChoice1);
+    let playerChoice2 = playerPrompt.substring(1);
+    console.log(playerChoice2);
+    let playerChoice3 = playerChoice2.toLowerCase();
+    console.log(playerChoice3);
+
+    return playerChoice1 + playerChoice3;
+}
 //this works, but not as I expected
 //values are from 0-2 not 1-3
 // this will still work though
