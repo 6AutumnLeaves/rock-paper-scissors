@@ -7,6 +7,11 @@
 
 
 // let computerPlay = () => console.log(Math.floor(Math.random() * 3));
+//this works, but not as I expected
+//values are from 0-2 not 1-3
+// this will still work though
+//so far compPlay return 0-2
+//I need if statements for this to return "Rock", "Paper", or "Scissors"
 function computerPlay(random) {
     let compNumber = (Math.floor(Math.random() * 3));
     let compChoice = undefined;
@@ -33,12 +38,25 @@ function playerSelection(playerChoice) {
     let playerChoice3 = playerChoice2.toLowerCase();
     console.log(playerChoice3);
 
-    return playerChoice1 + playerChoice3;
+    if((playerChoice1 + playerChoice3) != ("Rock" || "Paper" || "Scissors")) {
+        return "Must be 'Rock', 'Paper', or 'Scissors'!";
+    } else {
+        return playerChoice1 + playerChoice3;
 }
-//this works, but not as I expected
-//values are from 0-2 not 1-3
-// this will still work though
-//so far compPlay return 0-2
-//I need if statements for this to return "Rock", "Paper", or "Scissors"
+}
+//This seems redundant
+// let computerSelection = () => computerPlay();
+
+
+//take player and computer choice
+//compare what each function returns
+//output winner and text: "You win! Rock beats scissors"
+function playRound(playerSelection, computerSelection) {
+    
+   }
+
+
+
+
 
 
