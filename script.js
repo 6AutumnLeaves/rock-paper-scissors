@@ -37,21 +37,25 @@ function playerSelection(playerChoice) {
     console.log(playerChoice2);
     let playerChoice3 = playerChoice2.toLowerCase();
     console.log(playerChoice3);
-
-    if((playerChoice1 + playerChoice3) != ("Rock" || "Paper" || "Scissors")) {
+    let yourChoice = playerChoice1 + playerChoice3;
+    let Choices = 'Rock' || 'Paper' || 'Scissors';
+    if((yourChoice != Choices)) {
         return "Must be 'Rock', 'Paper', or 'Scissors'!";
     } else {
-        return playerChoice1 + playerChoice3;
+        return yourChoice;
 }
 }
 //This seems redundant
+//         |
+//         |
+//         V
 // let computerSelection = () => computerPlay();
 
 
 //take player and computer choice
 //compare what each function returns
 //output winner and text: "You win! Rock beats scissors"
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerPlay) {
     
    }
 
