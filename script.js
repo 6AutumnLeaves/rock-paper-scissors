@@ -28,7 +28,7 @@ function computerPlay(random) {
 //make it case insensitive
 //ie: if RocK or rOCK
 //return Rock
-function playerSelection(playerChoice) {
+function playerSelection(choice) {
     let playerPrompt = prompt("Rock, Paper, or Scissors?");
     console.log(playerPrompt);
     let playerChoice1 = playerPrompt[0].toUpperCase();
@@ -38,13 +38,13 @@ function playerSelection(playerChoice) {
     let playerChoice3 = playerChoice2.toLowerCase();
     console.log(playerChoice3);
     let yourChoice = playerChoice1 + playerChoice3;
-    let Choices = 'Rock' || 'Paper' || 'Scissors';
-    if((yourChoice != Choices)) {
-        return "Must be 'Rock', 'Paper', or 'Scissors'!";
-    } else {
+    // let Choices = 'Rock' || 'Paper' || 'Scissors';
+    // if((yourChoice != Choices)) {
+    //     return "Must be 'Rock', 'Paper', or 'Scissors'!";
+    // } else {
         return yourChoice;
 }
-}
+// }
 //This seems redundant
 //         |
 //         |
@@ -55,9 +55,43 @@ function playerSelection(playerChoice) {
 //take player and computer choice
 //compare what each function returns
 //output winner and text: "You win! Rock beats scissors"
-function playRound(playerSelection, computerPlay) {
+
+// const playerPick = playerSelection();
+// const computerSelection = computerPlay();
+
+function playRound(playerPick, computerSelection) {
+    var roundWinner = undefined;
+    let yourChoice = playerSelection();
+    let compChoice = computerPlay();
+
+    // playerSelection();
+    
+    // computerPlay();
+    
+    console.log(computerPlay());
+    
+    if (yourChoice == compChoice) {
+        return roundWinner = "It's a tie!"
+    }else if (yourChoice == "Rock" && compChoice === "Paper"){
+        return roundWinner = "You lose. Paper beats rock.";
+    }else if (yourChoice == "Rock" && compChoice === "Scissors") {
+        return roundWinner = "You win! Rock beats scissors.";
+    }else if (yourChoice == "Paper" && compChoice === "Rock") {
+        return roundWinner = "You win! Paper beats rock";
+    }else if (yourChoice == "Paper" && compChoice === "Scissors") {
+        return roundWinner = "You lose. Scissors beats paper";
+    }else if (yourChoice == "Scissors" && compChoice === "Rock") {
+        return roundWinner = "You lose. Rock beats scissors";
+    }else if (yourChoice == "Scissors" && compChoice === "Paper") {
+        return roundWinner = "You win! Scissors beats paper."
+    }else{
+        return "error";
+    }
     
    }
+
+//    const computerSelection = computerPlay();
+
 
 
 
