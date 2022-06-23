@@ -17,11 +17,18 @@ function computerPlay(random) {
     let compChoice = undefined;
     if (compNumber === 0) {
         return compChoice = "Rock";
+        console.log("Computer Choice is Rock");
+        
     } else if (compNumber === 1) {
       return compChoice = "Paper";
+      console.log("Computer Choice is Paper");
+
     } else {
         return compChoice = "Scissors";
+        console.log("Computer Choice is Scissors");
+
     }
+    console.log(compChoice);F
 }
 
 //prompt player for their choice
@@ -30,14 +37,14 @@ function computerPlay(random) {
 //return Rock
 function playerSelection(choice) {
     let playerPrompt = prompt("Rock, Paper, or Scissors?");
-    console.log(playerPrompt);
+    
     let playerChoice1 = playerPrompt[0].toUpperCase();
-    console.log(playerChoice1);
+    
     let playerChoice2 = playerPrompt.substring(1);
-    console.log(playerChoice2);
+    
     let playerChoice3 = playerChoice2.toLowerCase();
-    console.log(playerChoice3);
     let yourChoice = playerChoice1 + playerChoice3;
+    console.log(`Player Choice is ${yourChoice}`);
     // let Choices = 'Rock' || 'Paper' || 'Scissors';
     // if((yourChoice != Choices)) {
     //     return "Must be 'Rock', 'Paper', or 'Scissors'!";
@@ -59,35 +66,87 @@ function playerSelection(choice) {
 // const playerPick = playerSelection();
 // const computerSelection = computerPlay();
 
+
+// let yourChoice = playerSelection();
+// let compChoice = computerPlay();
+let roundWinner = undefined;
+let roundOutlook = undefined;
+
 function playRound(playerPick, computerSelection) {
-    var roundWinner = undefined;
+    // var roundWinner = undefined;
+    // var roundOutlook = undefined;
     let yourChoice = playerSelection();
     let compChoice = computerPlay();
-
     // playerSelection();
     
-    // computerPlay();
+    // computerPlay();compScore++;
     
-    console.log(computerPlay());
+    
     
     if (yourChoice == compChoice) {
-        return roundWinner = "It's a tie!"
+        roundWinner = "It's a tie!"
     }else if (yourChoice == "Rock" && compChoice === "Paper"){
-        return roundWinner = "You lose. Paper beats rock.";
-    }else if (yourChoice == "Rock" && compChoice === "Scissors") {
-        return roundWinner = "You win! Rock beats scissors.";
-    }else if (yourChoice == "Paper" && compChoice === "Rock") {
-        return roundWinner = "You win! Paper beats rock";
+        roundWinner = "Computer";
+        roundOutlook = "You lose. Paper beats rock.";
+
     }else if (yourChoice == "Paper" && compChoice === "Scissors") {
-        return roundWinner = "You lose. Scissors beats paper";
+        roundWinner = "Computer";
+        roundOutlook = "You lose. Scissors beats paper";
+
     }else if (yourChoice == "Scissors" && compChoice === "Rock") {
-        return roundWinner = "You lose. Rock beats scissors";
+        roundWinner = "Computer";
+        roundOutlook = "You lose. Rock beats scissors";
+
+    }else if (yourChoice == "Rock" && compChoice === "Scissors") {
+        roundWinner = "Player";
+        roundOutlook = "You win! Rock beats scissors.";
+        
+    }else if (yourChoice == "Paper" && compChoice === "Rock") {
+        roundWinner = "Player";
+        roundOutlook = "You win! Paper beats rock";
+        
     }else if (yourChoice == "Scissors" && compChoice === "Paper") {
-        return roundWinner = "You win! Scissors beats paper."
+        roundWinner = "Player";
+        roundOutlook = "You win! Scissors beats paper."
+        
     }else{
         return "error";
     }
     
+   }
+
+//play function round 5 times
+   function game (round) {
+       let compScore = 0;
+       let playerScore = 0;
+
+
+       for (let i = 0; i < 5; i++) {
+           playRound();
+           
+           if (roundWinner == "Player") {
+               playerScore ++;
+                console.log(roundOutlook); 
+                 
+           } else if (roundWinner == "Computer") {
+               compScore++;
+                console.log(roundOutlook);
+                
+           }else{
+               playerScore++;
+               compScore++;
+                console.log(roundOutlook); 
+                
+           }
+       }
+       
+       if (playerScore > compScore) {
+           return `You scored ${playerScore} and the computer scored ${compScore}. You win!`;
+       }else if (compScore > playerScore) {
+           return `You scored ${playerScore} and the computer scored ${compScore}. You lose`;
+       }else{
+           return "You tied";
+       }
    }
 
 //    const computerSelection = computerPlay();
