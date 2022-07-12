@@ -16,19 +16,18 @@ function computerPlay(random) {
     let compNumber = (Math.floor(Math.random() * 3));
     let compChoice = undefined;
     if (compNumber === 0) {
-        return compChoice = "Rock";
         console.log("Computer Choice is Rock");
+        return compChoice = "Rock";
         
     } else if (compNumber === 1) {
+        console.log("Computer Choice is Paper");
       return compChoice = "Paper";
-      console.log("Computer Choice is Paper");
 
     } else {
-        return compChoice = "Scissors";
         console.log("Computer Choice is Scissors");
+        return compChoice = "Scissors";
 
     }
-    console.log(compChoice);F
 }
 
 //prompt player for their choice
@@ -43,13 +42,11 @@ function playerSelection(choice) {
     let playerChoice2 = playerPrompt.substring(1);
     
     let playerChoice3 = playerChoice2.toLowerCase();
+    
     let yourChoice = playerChoice1 + playerChoice3;
     console.log(`Player Choice is ${yourChoice}`);
-    // let Choices = 'Rock' || 'Paper' || 'Scissors';
-    // if((yourChoice != Choices)) {
-    //     return "Must be 'Rock', 'Paper', or 'Scissors'!";
-    // } else {
-        return yourChoice;
+    
+    return yourChoice;
 }
 // }
 //This seems redundant
