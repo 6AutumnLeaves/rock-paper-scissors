@@ -52,10 +52,23 @@ function updateScore() {
 const printWinner = () => {
 theVictor.textContent = roundOutlook;
 }
+
+const addReplayButton = () => {
+    const replayButton = document.createElement('div');
+    replayButton.classList.add('replayButton');
+    replayButton.classList.add('click');
+    replayButton.textContent = 'Replay?'
+    replayButtonContainer.appendChild(replayButton);
+    replayButton.onclick = playAgain;
+}
 function stopGame() {
  rock.removeEventListener('click',playRock);
  paper.removeEventListener('click', playPaper);
  scissors.removeEventListener('click', playScissors);
+
+ addReplayButton();
+
+
 }
 
 const removeHighlight = () => {
@@ -147,6 +160,8 @@ const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
 const theVictor = document.querySelector('.roundOutlook');
+const replayButtonContainer = document.querySelector('.replayButtonContainer');
+
 
 const playRock = () => {
     playRound("Rock", computerPlay());

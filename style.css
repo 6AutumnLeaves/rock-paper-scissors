@@ -42,13 +42,27 @@ flex: 0 1 auto;
 
 .roundOutlook {
     text-align: center;
-    margin-bottom: 300px;
+    margin-bottom: 40px;
     font-size: 30px;
 }
 
 .roundWinner {
     background: yellow;
     
+}
+
+.replayButtonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.replayButton {
+    padding: 30px;
+    background: gold;
+    text-align: center;
+    font-size: 35px;
+    border: 2px solid goldenrod;
 }
 
 .score {
