@@ -33,6 +33,10 @@ flex: 0 1 auto;
     padding: 35px 75px 35px 75px;
     background: gainsboro;
     font-size: 20px;
+    
+}
+
+.click {
     cursor: pointer;
 }
 
@@ -40,6 +44,11 @@ flex: 0 1 auto;
     text-align: center;
     margin-bottom: 300px;
     font-size: 30px;
+}
+
+.roundWinner {
+    background: yellow;
+    
 }
 
 .score {
