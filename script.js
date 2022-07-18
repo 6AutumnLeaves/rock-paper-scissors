@@ -12,7 +12,7 @@
 // this will still work though
 //so far compPlay return 0-2
 //I need if statements for this to return "Rock", "Paper", or "Scissors"
-function computerPlay(random) {
+function computerPlay() {
     let compNumber = (Math.floor(Math.random() * 3));
     let compChoice = undefined;
     if (compNumber === 0) {
@@ -72,43 +72,41 @@ function playerSelection(choice) {
 let roundWinner = undefined;
 let roundOutlook = undefined;
 
-function playRound(playerPick, computerSelection) {
-    // var roundWinner = undefined;
-    // var roundOutlook = undefined;
-    let yourChoice = playerSelection();
-    let compChoice = computerPlay();
-    // playerSelection();
+function playRound(playerSelection, computerPlay) {
+   
+    yourChoice = playerSelection;
+    compChoice = computerPlay;
     
-    // computerPlay();compScore++;
     
     
     
     if (yourChoice == compChoice) {
         roundWinner = "It's a tie!"
+        console.log(roundWinner);
     }else if (yourChoice == "Rock" && compChoice === "Paper"){
         roundWinner = "Computer";
         roundOutlook = "You lose. Paper beats rock.";
-
+console.log(roundWinner);
     }else if (yourChoice == "Paper" && compChoice === "Scissors") {
-        roundWinner = "Computer";
+        roundWinner = "Computer"
         roundOutlook = "You lose. Scissors beats paper";
-
+        console.log(roundWinner);
     }else if (yourChoice == "Scissors" && compChoice === "Rock") {
         roundWinner = "Computer";
         roundOutlook = "You lose. Rock beats scissors";
-
+console.log(roundWinner);
     }else if (yourChoice == "Rock" && compChoice === "Scissors") {
         roundWinner = "Player";
         roundOutlook = "You win! Rock beats scissors.";
-        
+    console.log(roundWinner);
     }else if (yourChoice == "Paper" && compChoice === "Rock") {
         roundWinner = "Player";
         roundOutlook = "You win! Paper beats rock";
-        
+    console.log(roundWinner);
     }else if (yourChoice == "Scissors" && compChoice === "Paper") {
         roundWinner = "Player";
         roundOutlook = "You win! Scissors beats paper."
-        
+    console.log(roundWinner);
     }else{
         return "error";
     }
@@ -117,12 +115,10 @@ function playRound(playerPick, computerSelection) {
 
 //play function round 5 times
    function game (round) {
-       let compScore = 0;
-       let playerScore = 0;
+       
 
 
        for (let i = 0; i < 5; i++) {
-           playRound();
            
            if (roundWinner == "Player") {
                playerScore ++;
@@ -151,6 +147,28 @@ function playRound(playerPick, computerSelection) {
 
 //    const computerSelection = computerPlay();
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//new js // dom stuff
+
+const playerScore = document.querySelector(".playerScore");
+const rock = document.querySelector('rock');
+const paper = document.querySelector('paper');
+const scissors = document.querySelector('scissors');
+
+rock.addEventListener('click', function() {
+    playRound("Rock", computerPlay());
+})
+
+paper.addEventListener('click', function() {
+    playRound("Paper", computerPlay());
+})
+
+scissors.addEventListener('click', function() {
+    playRound("Scissors", computerPlay());
+})
+// rock.addEventListener('click', playRound('Rock', computerPlay()));
+// paper.addEventListener('click', playRound('Paper', computerPlay()));
+// scissors.addEventListener('click', playRound('Scissors', computerPlay()));
 
 
 
