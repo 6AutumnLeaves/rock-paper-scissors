@@ -24,7 +24,7 @@ flex: 0 1 auto;
 
 .player {
     display: flex;
-    gap: 5px;
+    gap: 20px;
 
 }
 
@@ -34,6 +34,13 @@ flex: 0 1 auto;
     background: gainsboro;
     font-size: 20px;
     
+}
+
+.rock:hover, .paper:hover, .scissors:hover {
+    transform: scale(1.1);
+    background-color: #3a3b3c;
+    color: white;
+    transition:0.3s;
 }
 
 .click {
@@ -64,6 +71,7 @@ flex: 0 1 auto;
     font-size: 35px;
     border: 2px solid goldenrod;
 }
+
 
 .score {
     display: flex;
