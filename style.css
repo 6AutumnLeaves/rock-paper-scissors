@@ -33,6 +33,7 @@ flex: 0 1 auto;
     padding: 35px 75px 35px 75px;
     background: gainsboro;
     font-size: 20px;
+    transition:0.3s;
     
 }
 
@@ -40,7 +41,7 @@ flex: 0 1 auto;
     transform: scale(1.1);
     background-color: #3a3b3c;
     color: white;
-    transition:0.3s;
+    
 }
 
 .click {
