@@ -10,7 +10,6 @@ font-family: Apple Chancery, cursive;
 }
 header {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     background: crimson;
@@ -25,7 +24,6 @@ flex: 0 1 auto;
 
 .player {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
 
 }
@@ -92,6 +90,7 @@ padding: 2vh;
 color: white;
 
 }
+
 /*For mobile responsiveness*/
 @media only screen and (max-width: 600px) {
     body {
