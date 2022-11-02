@@ -94,10 +94,9 @@ color: white;
 /*For mobile responsiveness*/
 @media only screen and (max-width: 600px) {
     body {
-        min-height: 90vh;
+        min-height: 100vh;
         text-align: center;
         color: black;
-        -webkit-text-fill-color: black;
     }
 
     header {
@@ -128,7 +127,7 @@ color: white;
         padding: 35px;
     }
     .player {
-        margin-left: 3px;
+        margin-left: 10px;
         margin-right: 3px;
     }
     .rock, .paper, .scissors {
@@ -145,6 +144,9 @@ color: white;
         background-color: #3a3b3c;
         color: white;
         
+    }
+    footer {
+        color: white;
     }
 
     }
