@@ -94,7 +94,7 @@ color: white;
 /*For mobile responsiveness*/
 @media only screen and (max-width: 600px) {
     body {
-        min-height: 100vh;
+        min-height: 90vh;
         text-align: center;
         color: black;
         -webkit-text-fill-color: black;
