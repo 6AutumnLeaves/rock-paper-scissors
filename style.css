@@ -99,6 +99,21 @@ color: white;
         color: black;
         -webkit-text-fill-color: black;
     }
+
+    header {
+        color: white;
+        display: flex;
+        flex-wrap: nowrap;
+        min-width: 100%;
+    }
+
+    .main {
+        height:100%;
+    }
+
+    .footer {
+        min-width: 100%;
+    }
     
     .roundOutlook {
         text-align: center;
@@ -131,4 +146,5 @@ color: white;
         color: white;
         
     }
+
     }
